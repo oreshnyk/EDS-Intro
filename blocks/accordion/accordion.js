@@ -4,7 +4,7 @@
  * https://www.hlx.live/developer/block-collection/accordion
  */
 
-import { loadTranslate } from "./placeholder";
+import { loadTranslate } from "./placeholder.js";
 
 export default async function decorate(block) {
     const translations = await loadTranslate('en');
