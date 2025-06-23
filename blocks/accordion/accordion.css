@@ -60,25 +60,30 @@
   background-color: var(--background-color);
 }
 
+.accordion-item-label {
+  position: relative;
+}
+
 .accordion-tooltip {
   display: none;
   position: absolute;
   left: 100%;
   top: 50%;
-  transform: translateY(-50%);
-  background: #333;
+  transform: translate(8px, -50%);
+  background-color: #333;
   color: #fff;
-  padding: 2px 8px;
+  padding: 4px 8px;
+  font-size: 12px;
   border-radius: 4px;
   white-space: nowrap;
-  z-index: 2;
-}
-
-.accordion-item-label {
-  position: relative;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .accordion-item-label:hover .accordion-tooltip,
 .accordion-item-label:focus .accordion-tooltip {
-  display: inline-block;
+  display: block;
+  opacity: 1;
 }

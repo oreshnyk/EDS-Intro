@@ -3,7 +3,6 @@ export async function loadTranslate(lang = 'en') {
 
   try {
     const resp = await fetch(placeholderData);
-    console.log('Full JSON:', JSON.stringify(json, null, 2));
 
     if (!resp.ok) {
       console.error(`Failed to fetch: ${resp.statusText}`);
@@ -12,6 +11,7 @@ export async function loadTranslate(lang = 'en') {
     
 
     const json = await resp.json();
+    console.log('Full JSON:', JSON.stringify(json, null, 2));
 
     if (!json.data || !Array.isArray(json.data)) {
       console.error('Malformed response: "data" is missing or not an array');
