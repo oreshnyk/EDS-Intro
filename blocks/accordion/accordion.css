@@ -59,3 +59,8 @@
   border-top: 1px solid #dadada;
   background-color: var(--background-color);
 }
+
+.accordion-tooltip {
+  margin-left: 8px;
+  font-size: 0.9em;
+}
